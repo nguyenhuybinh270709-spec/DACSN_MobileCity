@@ -1,0 +1,81 @@
+.banner img {
+  width: 50%;
+  height: 150px;
+}
+
+.navbar-brand img {
+  width: auto;
+  height: 40px;
+}
+
+.navbar .nav-link {
+  position: relative;
+  color: white; /* nếu muốn chữ trắng */
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px; /* độ dày viền */
+  background-color: white; /* màu viền */
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar .nav-link.active::after {
+  width: 100%;
+  font-weight: bold;
+}
+/* Ẩn mũi tên mặc định của dropdown-toggle */
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+
+#backtotop {
+  width: auto;
+  height: auto;
+  color: white;
+  background-color: #c5992e;
+  position: fixed; /* luôn cố định */
+  bottom: 40px; /* cách đáy 40px */
+  right: 40px; /* cách bên phải 40px */
+  display: none; /* mặc định ẩn */
+  z-index: 9999; /* luôn nổi trên cùng */
+}
+
+.content {
+  margin-top: 100px;
+}
+
+.content .container .row .col img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+/* Hiệu ứng hover cho các sản phẩm */
+.product-card {
+  transition: all 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-color: #ffc107; /* viền vàng nhạt */
+}
+/* End Hiệu ứng hover cho các sản phẩm */
+
+/* No result */
+#noResultMsg {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
